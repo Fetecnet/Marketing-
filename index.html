@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramenta de Marketing Digital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        input[type="submit"] {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ferramenta de Marketing Digital</h1>
+    <form action="resposta.html" method="GET">
+        <fieldset>
+            <legend>Tipo de Negócio</legend>
+            <label for="tipo-negocio">Qual é o seu setor de atuação?</label>
+            <select id="tipo-negocio" name="tipo-negocio" required>
+                <option value="">Escolha uma opção</option>
+                <option value="comercio-roupas-acessorios">Comércio de roupas e acessórios</option>
+                <option value="beleza-estetica">Serviços de Beleza e Estética</option>
+                <option value="alimentacao">Serviços de Alimentação</option>
+                <option value="tecnologia-informatica">Tecnologia e Informática</option>
+                <option value="educacao-treinamento">Educação e Treinamento</option>
+                <option value="consultoria-assessoria">Consultoria e Assessoria</option>
+                <option value="cosmeticos-beleza">Comércio de Cosméticos e Produtos de Beleza</option>
+                <option value="artesanato-personalizados">Artesanato e Produtos Personalizados</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Público-Alvo</legend>
+            <label for="idade">Idade</label>
+            <select id="idade" name="idade" required>
+                <option value="">Escolha uma opção</option>
+                <option value="18-30">Entre 18 e 30 anos</option>
+                <option value="31-43">Entre 31 e 43 anos</option>
+                <option value="44-56">Entre 44 e 56 anos</option>
+                <option value="57+">57+</option>
+            </select>
+
+            <label for="genero">Gênero</label>
+            <select id="genero" name="genero" required>
+                <option value="">Escolha uma opção</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+
+            <label for="localizacao">Localização</label>
+            <select id="localizacao" name="localizacao" required>
+                <option value="">Escolha uma opção</option>
+                <option value="porto-alegre">Porto Alegre</option>
+                <option value="pelotas">Pelotas</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Objetivos de Marketing</legend>
+            <label for="objetivo-marketing">Quais são seus objetivos principais nas redes sociais?</label>
+            <select id="objetivo-marketing" name="objetivo-marketing" required>
+                <option value="">Escolha uma opção</option>
+                <option value="seguidores-interacao">Ganhar mais seguidores e interação</option>
+                <option value="vendas-alcance">Aumentar as vendas e alcance</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Plataformas de Redes Sociais</legend>
+            <label for="plataformas">Quais plataformas você já utiliza?</label>
+            <select id="plataformas" name="plataformas" multiple>
+                <option value="facebook">Facebook</option>
+                <option value="instagram">Instagram</option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="tiktok">TikTok</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Concorrência</legend>
+            <label for="concorrencia">Quais redes sociais seus concorrentes utilizam?</label>
+            <input type="text" id="concorrencia" name="concorrencia">
+        </fieldset>
+
+        <fieldset>
+            <legend>Recursos Disponíveis</legend>
+            <label for="orcamento">Qual é o seu orçamento para marketing digital?</label>
+            <select id="orcamento" name="orcamento" required>
+                <option value="">Escolha uma opção</option>
+                <option value="ate-100">Até R$100</option>
+                <option value="100-500">De R$100 a R$500</option>
+                <option value="acima-500">Acima de R$500</option>
+            </select>
+
+            <label for="equipe">Você tem uma pessoa dedicada para as redes sociais ou trabalha sozinho?</label>
+            <select id="equipe" name="equipe" required>
+                <option value="">Escolha uma opção</option>
+                <option value="dedicada">Tenho uma pessoa</option>
+                <option value="sozinho">Trabalho sozinho</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Conteúdo Atual</legend>
+            <label for="tipo-conteudo">Que tipo de conteúdo você já publica?</label>
+            <select id="tipo-conteudo" name="tipo-conteudo" required>
+                <option value="">Escolha uma opção</option>
+                <option value="imagens">Imagens</option>
+                <option value="videos">Vídeos</option>
+            </select>
+
+            <label for="frequencia-publicacao">Com que frequência você publica novos conteúdos?</label>
+            <select id="frequencia-publicacao" name="frequencia-publicacao" required>
+                <option value="">Escolha uma opção</option>
+                <option value="todos-dias">Todos os dias</option>
+                <option value="4-vezes-semana">4 vezes por semana</option>
+                <option value="3-vezes-semana">3 vezes por semana</option>
+                <option value="2-vezes-semana">2 vezes por semana</option>
+                <option value="1-vez-semana">1 vez por semana</option>
+                <option value="nenhuma-vez">Nenhuma vez por semana</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Histórico de Campanhas</legend>
+            <label for="historico-campanhas">Quais campanhas de redes sociais você já realizou?</label>
+            <textarea id="historico-campanhas" name="historico-campanhas" rows="4" cols="50"></textarea>
+
+            <label for="resultados-campanhas">Quais foram os resultados?</label>
+            <textarea id="resultados-campanhas" name="resultados-campanhas" rows="4" cols="50"></textarea>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

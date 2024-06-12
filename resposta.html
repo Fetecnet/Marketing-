@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposta de Marketing Digital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #444;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .resposta {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Respostas de Marketing Digital</h1>
+        <div id="respostas">
+            <!-- Respostas serão inseridas aqui -->
+        </div>
+    </div>
+
+    <script>
+        const respostas = {
+            "comercio-roupas-acessorios_18-30_seguidores-interacao": [
+                "Investir em influenciadores digitais pode aumentar seu alcance.",
+                "Use hashtags populares para atrair um público mais jovem.",
+                "Organize sorteios e promoções para aumentar o engajamento.",
+                "Crie conteúdo visual atraente com fotos de alta qualidade.",
+                "Utilize stories interativos no Instagram para engajar seguidores."
+            ],
+            "beleza-estetica_31-43_vendas-alcance": [
+                "Ofereça descontos especiais e promoções limitadas.",
+                "Use depoimentos de clientes satisfeitos para construir confiança.",
+                "Crie tutoriais em vídeo para mostrar seus serviços.",
+                "Invista em anúncios pagos no Facebook e Instagram.",
+                "Ofereça pacotes promocionais para atrair novos clientes."
+            ],
+            "alimentacao_44-56_seguidores-interacao": [
+                "Compartilhe receitas e dicas de culinária em suas redes sociais.",
+                "Realize lives mostrando o preparo dos pratos.",
+                "Incentive seus clientes a postarem fotos e marcarem seu negócio.",
+                "Crie um blog com conteúdo relacionado à alimentação saudável.",
+                "Use e abuse de imagens apetitosas dos seus pratos."
+            ],
+            "tecnologia-informatica_57_vendas-alcance": [
+                "Ofereça webinars gratuitos para atrair novos clientes.",
+                "Use o LinkedIn para alcançar um público mais profissional.",
+                "Crie artigos de blog sobre as últimas tendências em tecnologia.",
+                "Invista em campanhas de email marketing.",
+                "Ofereça demonstrações gratuitas de seus produtos."
+            ],
+            "educacao-treinamento_18-30_seguidores-interacao": [
+                "Crie vídeos curtos com dicas de estudo e aprendizado.",
+                "Use Instagram Stories para compartilhar dicas diárias.",
+                "Organize sessões de perguntas e respostas ao vivo.",
+                "Publique depoimentos de ex-alunos nas redes sociais.",
+                "Crie grupos de estudo online para seus seguidores."
+            ],
+            // Adicione mais combinações aqui
+        };
+
+        function getResposta(tipoNegocio, idade, objetivo) {
+            const key = `${tipoNegocio}_${idade}_${objetivo}`;
+            if (respostas[key]) {
+                return respostas[key];
+            } else {
+                return ["Desculpe, não temos uma recomendação específica para sua combinação de respostas."];
+            }
+        }
+
+        // Obtém os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipoNegocio = urlParams.get('tipo-negocio');
+        const idade = urlParams.get('idade');
+        const objetivo = urlParams.get('objetivo-marketing');
+
+        // Obtém a resposta com base nas respostas selecionadas
+        const respostaSelecionada = getResposta(tipoNegocio, idade, objetivo);
+
+        // Exibe as respostas na página
+        const respostasDiv = document.getElementById('respostas');
+        respostaSelecionada.forEach(resposta => {
+            const p = document.createElement('p');
+            p.classList.add('resposta');
+            p.innerText = resposta;
+            respostasDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
